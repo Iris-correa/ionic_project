@@ -8,14 +8,18 @@
 
 <ion-content [fullscreen]="true"><br>
 
-  <ion-item>
-    <ion-label>Number 1</ion-label>
-    <ion-input name="n1" ngModel></ion-input>
-  </ion-item> <br>
-  <ion-item>
-    <ion-label>Number 2</ion-label>
-    <ion-input name = "n2" ></ion-input>
-  </ion-item>
+  <form #form = "ngForm">
+    <ion-item>
+      <ion-label>Number 1</ion-label>
+      <ion-input name="n1" ngModel></ion-input>
+    </ion-item> <br>
+    <ion-item>
+      <ion-label>Number 2</ion-label>
+      <ion-input name = "n2" ></ion-input>
+    </ion-item>
+    <ion-button (click)="SUM(form)">+</ion-button>
+  </form>
+ 
   
  
 
