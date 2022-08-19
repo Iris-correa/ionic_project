@@ -8,16 +8,23 @@
 
 <ion-content [fullscreen]="true"><br>
 
-  <form #form = "ngForm">
+  <form #formu = "ngForm">
     <ion-item>
       <ion-label>Number 1</ion-label>
       <ion-input name="n1" ngModel></ion-input>
     </ion-item> <br>
     <ion-item>
       <ion-label>Number 2</ion-label>
-      <ion-input name = "n2" ></ion-input>
+      <ion-input name = "n2" ngModel ></ion-input>
     </ion-item>
-    <ion-button (click)="SUM(form)">+</ion-button>
+    <ion-button (click)="SUM(formu)">+</ion-button>
+    <ion-button (click) = "SUB(formu)">-</ion-button>
+    <ion-button (click) = "MULT(formu)">*</ion-button>
+    <ion-button (click) = "DIV(formu)">/</ion-button>
+  <ion-item>
+    <ion-label>Result</ion-label>
+    <ion-input value="{{result}}"></ion-input>
+  </ion-item>
   </form>
  
   
